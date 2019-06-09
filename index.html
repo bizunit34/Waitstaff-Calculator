@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Waitstaff Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+    <h1>Waitstaff Calculator</h1>
+    </header>
+    <main>
+        <section class = 'box left'>
+                <h2>Enter the Meal Details</h2>
+                <form id="js-calculator-form">
+                    <label for="meal-price" class = 'calculation-text'>Base Meal Price: $</label>
+                    <input required type="number" step='0.01' name="meal-price" class="js-meal-price" placeholder="e.g., 7.55">
+                    <br><br><br>
+                    <label for="tax-rate" class = 'calculation-text'>Tax Rate: %</label>
+                    <input required type="number" step='0.01' name="tax-rate" class="js-tax-rate" placeholder="e.g., 6">
+                    <br><br><br>
+                    <label for="tip-percentage" class = 'calculation-text'>Tip Percentage: %</label>
+                    <input required type="number" step='0.01' name="tip-percentage" class="js-tip-percentage" placeholder="e.g., 20">
+                    <br><br><br>
+                    <button type="submit" class = 'press-me'>Submit</button>
+                    <button type="reset" id = 'clear-meal-cost' class = 'clear-me'>Cancel</button>
+                </form>
+        </section>
+        <section class = 'box right'>
+            <div class = 'upper'>
+                    <h2>Customer Charges</h2>
+                    <div class = 'js-subtotal calculation-text'></div>
+                    <div class = 'js-tip-amount calculation-text'></div>
+                    <div class = 'js-meal-total calculation-text'></div>                    
+            </div>
+            <div class = 'lower'>
+                    <h2>My Earnings Info</h2>
+                    <div class = 'js-tip-total'></div>
+                    <div class = 'js-meal-count calculation-text'></div>
+                    <div class = 'js-avg-tip-per-meal calculation-text'></div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <button type="button" id = 'reset-everything' class = 'reset-all'>Reset</button>        
+    </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
